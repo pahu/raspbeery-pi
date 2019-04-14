@@ -11,7 +11,7 @@ body {
  */
 
 header {
-  background-color: #DFB887;
+  background-color: #3f51b5;
   height: 35px;
   width: 100%;
   opacity: .9;
@@ -86,12 +86,12 @@ h3 {
 }
 
 .menu li a {
-  color: #444;
+  color: #FFFFFF;
   text-decoration: none;
 }
 
 .sensor-temperature {
-  font-size: 70px;
+  font-size: 120px;
 }
 
 .sensor-id {
