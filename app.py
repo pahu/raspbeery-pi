@@ -6,6 +6,7 @@ app = Flask(__name__)
 def home():    
     sensorId = '28-041752558aff'
     temperature = DS18B20.get_temperature(sensorId)
+    temperature = "%s%s" % (temperature, "°C")
     return render_template('home.html', sensorId=sensorId, temperature=temperature)
 
 @app.route('/about/')

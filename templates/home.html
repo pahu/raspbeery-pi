@@ -1,7 +1,13 @@
 {% extends "layout.html" %}
-{% block content %}    
-    <div class="home">
-        <p class="sensor-temperature" >{{ temperature }}</p>    	
-        <p class="sensor-id" >{{ sensorId }}</p>
+{% block content %}   
+    <div class="row">
+        <div class="col-sm">
+            <div class="card shadow p-3 mb-5 bg-white rounded">
+                <div class="card-body">    
+                    <h1>{{ temperature }}</h1>    	
+                    <p class="sensor-id" >{{ sensorId }}</p>
+                </div>
+            </div>
+        </div>
     </div>
 {% endblock %}
