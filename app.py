@@ -1,3 +1,4 @@
+import datetime
 from sensors import DS18B20
 from flask import Flask, render_template
 app = Flask(__name__)
@@ -7,7 +8,9 @@ def home():
     sensorId = '28-041752558aff'
     temperature = DS18B20.get_temperature(sensorId)
     temperature = "%s%s" % (temperature, "°C")
-    return render_template('home.html', sensorId=sensorId, temperature=temperature)
+    now = datetime.datetime.now()
+    time = now.strftime("%Y-%m-%d %H:%M")
+    return render_template('home.html', sensorId=sensorId, temperature=temperature, time=time)
 
 @app.route('/about/')
 def about():
