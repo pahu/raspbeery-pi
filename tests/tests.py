@@ -1,5 +1,5 @@
 # TODO: Move to tests folder and try relative import
-from sensors import DS18B20
+from src.sensor import DS18B20
 
 if __name__ == '__main__':
     print ("toroi-pi: tests")

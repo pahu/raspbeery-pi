@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Toroi Pi</title>
+    <title>{{ title }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ url_for('static', filename='css/app.css') }}" rel="stylesheet">
@@ -12,7 +12,7 @@
   <body>
 
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-          <a class="navbar-brand" href="#">Toroi Pi</a>
+          <a class="navbar-brand" href="#">{{ title }}</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" 
             data-target="#navbarSupportedContent" 
             aria-controls="navbarSupportedContent" 
