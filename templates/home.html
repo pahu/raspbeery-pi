@@ -3,10 +3,32 @@
     <div class="row">
         <div class="col-sm">
             <div class="card shadow p-3 mb-5 bg-white rounded">
-                <div class="card-body">    
-                    <h5 class="text-secondary">{{ name }}</h5>
-                    <h1>{{ temperature }}</h1>    	
-                    <p class="text-secondary">{{ time }}</p>
+                <div class="card-body p-0">
+                    <div class="container">    
+                    <div class="row">
+                        <div class="col-sm h-100 w-50">
+                            <div class="text-actual-temperature">{{ temperature }}</div>    	
+                            <div class="text-actual-temperature-time text-right">{{ time }}</div>
+                        </div>
+                        <div class="col-sm h-100 w-50 text-right">
+                            <div class=mb-4>
+                                <input type="text" class="text-target-temperature text-right" name="target-temperature" value="21">
+                            </div>
+                            <div class="mb-1">
+                                <input type="checkbox" class="mr-2 text-center" name="active" value="active">Active<br>
+                            </div>
+                            <div class="mb-1 float-right">
+                                <div class="text-indicator-heat text-center">Heating</div>
+                            </div>
+                            <div class="mb-1 float-right">
+                                <div class="text-indicator-cool text-center">Cooling</div>
+                            </div>
+                            <div class="mb-1 float-right">
+                                <div class="text-indicator-neutral text-center">Neutral</div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

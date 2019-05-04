@@ -10,10 +10,10 @@ def get_temperature(id):
       line = f.readline() # read 2nd line
       t = line.rsplit('t=',1)
     else:
-      t = 99999
+      t = 99.9
     f.close()
  
     return int(t[1])/float(1000)
  
   except:
-    return 99999
+    return 99.9

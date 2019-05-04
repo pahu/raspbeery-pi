@@ -1,6 +1,6 @@
 brewery:
   name: Hutsnz Brewery
-  
+
 fermenters:
   - id: 1
     name: Fridge
@@ -14,4 +14,10 @@ fermenters:
     targetTemp: 18
     gpioHeat: 3
     gpioCool: 4
+kettles:
+  - id: 3
+    name: Kettle1
+mashtuns:
+  - id: 4
+    name: Mash Tun 1
     
