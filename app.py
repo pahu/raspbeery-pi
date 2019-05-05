@@ -1,6 +1,6 @@
 import datetime
 import yaml
-from src.sensor import DS18B20
+from toroi.sensor import DS18B20
 from flask import Flask, render_template
 app = Flask(__name__)
 
