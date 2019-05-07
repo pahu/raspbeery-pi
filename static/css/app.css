@@ -8,20 +8,17 @@
   margin-bottom: 15px;
 }
 
-.text-actual-temperature
-{
+.text-actual-temperature {
   font-size: 2.8rem;
   font-weight: bold;
 }
 
-.text-actual-temperature-time
-{
+.text-actual-temperature-time {
   font-size: .8rem;
   color: dimgray;
 }
 
-.text-target-temperature
-{ 
+.text-target-temperature { 
   font-size: 1.5rem;
   color: dimgray;
   width: 4rem;
@@ -29,22 +26,19 @@
   background-color: aliceblue;
 }
 
-.text-indicator-heat
-{
+.text-indicator-heat {
   background-color: #dc3545;
   color: white;
   width: 4rem;
 }
 
-.text-indicator-cool
-{
-  background-color: #007bff;
+.text-indicator-cool {
+  background-color: #28a745;
   color: white;
   width: 4rem;
 }
 
-.text-indicator-neutral
-{
+.text-indicator-neutral {
   background-color: #adb5bd;
   color: white;
   width: 4rem;

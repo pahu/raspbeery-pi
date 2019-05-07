@@ -2,7 +2,7 @@
 {% block content %}   
     <div class="row">
         <div class="col-sm">
-            <div class="card shadow p-3 mb-5 bg-white rounded">
+            <div id="1" class="card shadow p-3 mb-5 bg-white rounded">
                 <div class="card-body p-0">
                     <div class="container">    
                     <div class="row">
@@ -13,10 +13,19 @@
                         </div>
                         <div class="col-sm h-100 w-50 text-right">
                             <div class=mb-4>
-                                <input type="text" class="text-target-temperature text-right" name="target-temperature" value="21">
+                                <input type="text" class="text-target-temperature text-right" 
+                                name="target-temperature" 
+                                value='{{ targetTemp }}'>
                             </div>
                             <div class="mb-1">
-                                <input type="checkbox" class="mr-2 text-center" name="active" value="active">Active<br>
+                                <label class="switch">
+                                    <input type="checkbox" 
+                                    {% if active %}
+                                        checked
+                                    {% endif %} 
+                                    >
+                                    <span class="slider round"></span>
+                                  </label>
                             </div>
                             <div class="mb-1 float-right">
                                 <div class="text-indicator-heat text-center">Heating</div>

@@ -3,9 +3,10 @@ brewery:
 
 fermenters:
   - id: 1
+    active: True
     name: Fridge
     sensorId: 28-041752558aff
-    targetTemp: 21
+    targetTemp: 19
     gpioHeat: 1
     gpioCool: 2
   - id: 2
