@@ -1,1 +1,0 @@
-from toroi.base.config import Config
