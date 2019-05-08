@@ -7,20 +7,20 @@
                     <div class="container">    
                     <div class="row">
                         <div class="col-sm h-100 w-50">
-                            <h5 class="text-secondary">{{ name }}</h5>
-                            <div class="text-actual-temperature">{{ temperature }}</div>    	
-                            <div class="text-actual-temperature-time text-right">{{ time }}</div>
+                            <h5 class="text-secondary">{{ fermenter.name }}</h5>
+                            <div class="text-actual-temperature">{{ fermenter.temperature }}</div>    	
+                            <div class="text-actual-temperature-time text-right">{{ fermenter.temperature_read_time }}</div>
                         </div>
                         <div class="col-sm h-100 w-50 text-right">
                             <div class=mb-4>
                                 <input type="text" class="text-target-temperature text-right" 
                                 name="target-temperature" 
-                                value='{{ targetTemp }}'>
+                                value='{{ fermenter.target_temperature }}'>
                             </div>
                             <div class="mb-1">
                                 <label class="switch">
                                     <input type="checkbox" 
-                                    {% if active %}
+                                    {% if fermenter.active %}
                                         checked
                                     {% endif %} 
                                     >

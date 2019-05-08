@@ -2,14 +2,14 @@ brewery:
   name: Hutsnz Brewery
 
 fermenters:
-  - id: 1
+  - id: 0
+    name: The Refrigerator
     active: True
-    name: Fridge
-    sensorId: 28-041752558aff
-    targetTemp: 19
-    gpioHeat: 1
-    gpioCool: 2
-  - id: 2
+    sensor_id: 28-041752558aff
+    target_temperature: 21
+    gpio_heat: 1
+    gpio_cool: 2
+  - id: 1
     name: Test
     sensorId: "28-041752558aff"
     targetTemp: 18

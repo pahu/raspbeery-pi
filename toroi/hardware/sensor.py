@@ -1,3 +1,6 @@
+"""
+"""
+
 def get_temperature(id):
   try:
     t = ''
