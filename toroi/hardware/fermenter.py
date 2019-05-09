@@ -5,7 +5,7 @@ Fermenter class
 import datetime
 #import toroi.hardware. as hardware
 import toroi.base as base
-from .sensor import get_temperature
+from .sensor import Sensor
 
 class Fermenter:
     
@@ -17,8 +17,10 @@ class Fermenter:
         self.name = config['fermenters'][0]['name']
         self.target_temperature = config['fermenters'][0]['target_temperature']
         self.active = config['fermenters'][0]['active']
+        
         # set temperature and time
-        temp = get_temperature(self.sensor_id)
+        sensor = Sensor(self.sensor_id)
+        temp = sensor.get_temperature()
         temp = "{:.{}f}".format( temp, 1 )
         temp = "%s%s" % (temp, "°C")
         self.temperature = temp
