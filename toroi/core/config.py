@@ -13,3 +13,7 @@ class Config:
     def get_config(self):
         with open("config.yml", 'r') as ymlConfig:
             return yaml.load(ymlConfig)
+
+    def brewery_name(self):
+        cfg = self.get_config()
+        return cfg['brewery']['name']

@@ -3,6 +3,7 @@
 """
 
 import datetime
+from .config import Config
 
 class Environment:
 

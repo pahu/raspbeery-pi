@@ -9,15 +9,16 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():   
-    cfg = config.Config().get_config()
-    title = cfg['brewery']['name']
+    title = config.Config().brewery_name()
     f = fermenter.Fermenter(0)
     return render_template('home.html', 
         title=title, fermenter=f)
 
 @app.route('/about/')
 def about():
-    return render_template('about.html')
+    title = config.Config().brewery_name()
+    return render_template('about.html', 
+        title = title)
 
 if __name__ == '__main__':
     app.run(debug=True, port=6100)
