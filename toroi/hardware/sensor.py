@@ -1,4 +1,4 @@
-"""
+"""Sensor class docstring
 """
 
 class Sensor:
@@ -7,7 +7,15 @@ class Sensor:
     self.id = id
     pass
 
-  def get_temperature(self):
+  # formatted temperature
+  def temperature_formatted(self):
+    t = self.temperature()
+    t = "{:.{}f}".format( t, 1 )
+    t = "%s%s" % (t, "°C")
+    return t
+
+  # unformatted temperature
+  def temperature(self):
     try:
       t = ''
       filename = 'w1_slave'
