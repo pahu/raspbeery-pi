@@ -1,4 +1,5 @@
-"""Sensor class docstring
+"""Sensor class
+
 """
 
 class Sensor:

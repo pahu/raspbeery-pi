@@ -1,17 +1,17 @@
-import datetime
-import toroi.hardware as hardware
-import toroi.base as base
+"""Main app 
 
+"""
+
+from toroi.hardware import fermenter
+from toroi.core import config
 from flask import Flask, render_template
 app = Flask(__name__)
 
 @app.route("/")
 def home():   
-    config = base.config.Config().get_config()
-    title = config['brewery']['name']
-    
-    f = hardware.fermenter.Fermenter(0)
-
+    cfg = config.Config().get_config()
+    title = cfg['brewery']['name']
+    f = fermenter.Fermenter(0)
     return render_template('home.html', 
         title=title, fermenter=f)
 

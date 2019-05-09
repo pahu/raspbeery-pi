@@ -1,2 +1,2 @@
-import toroi.base
+import toroi.core
 import toroi.hardware

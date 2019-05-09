@@ -1,5 +1,5 @@
-"""
-System configuration class
+"""System configuration class
+
 """
 
 import yaml
