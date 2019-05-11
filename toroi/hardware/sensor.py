@@ -6,7 +6,6 @@ class Sensor:
 
   def __init__(self, id): 
     self.id = id
-    pass
 
   # formatted temperature
   def temperature_formatted(self):
