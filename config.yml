@@ -3,7 +3,7 @@ brewery:
 
 fermenters:
   - id: 0
-    name: The Refrigerator
+    name: El Frigo
     active: True
     sensor_id: 28-041752558aff
     target_temperature: 21
