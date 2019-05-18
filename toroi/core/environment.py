@@ -6,13 +6,12 @@ import datetime
 from .config import Config
 
 class Environment:
-
     def __init__(self):
         pass
 
     # formatted system time 
     def time_formatted(self):
-        return self.time().strftime("%Y-%m-%d %H:%M")
+        return self.time().strftime("%a %d %b %H:%M:%S")
 
     # unformatted system time
     def time(self):

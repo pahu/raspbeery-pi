@@ -3,11 +3,9 @@
 """
 
 from .sensor import Sensor
-from toroi.core import environment
-from toroi.core import config
+from toroi.core import environment, config
 
-class Fermenter:
-    
+class Fermenter:  
     def __init__(self,id):    
         # initialize from config.yaml
         cfg = config.Config().get_config()

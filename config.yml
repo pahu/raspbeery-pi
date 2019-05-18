@@ -10,11 +10,12 @@ fermenters:
     gpio_heat: 1
     gpio_cool: 2
   - id: 1
-    name: Test
-    sensorId: "28-041752558aff"
-    targetTemp: 18
-    gpioHeat: 3
-    gpioCool: 4
+    name: Test Fridge
+    active: True
+    sensor_id: 28-041752558aff
+    target_temperature: 21
+    gpio_heat: 1
+    gpio_cool: 2
 kettles:
   - id: 3
     name: Kettle1
