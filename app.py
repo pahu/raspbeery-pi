@@ -2,7 +2,7 @@
 
 """
 
-from flask import Flask, render_template
+from flask import Flask, render_template, jsonify
 from toroi.hardware.fermenter import Fermenter
 from toroi.core.config import Config
 
@@ -20,6 +20,13 @@ def about():
     title = Config().brewery_name()
     return render_template('about.html', 
         title = title)
+
+@app.route('/api/fermenter/refresh/<int:id>')
+def api_fermenter_refresh(id):
+        f = Fermenter(id)
+        # ToDo log fermenter readings on each refresh call from client
+        # ToDo switch mode (heating/cooling/neutral) according to temperature
+        return jsonify({'temperature': f.temperature, 'temperature_read_time': f.temperature_read_time })
 
 if __name__ == '__main__':
     app.run(debug=True, port=6101)

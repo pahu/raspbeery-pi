@@ -11,10 +11,10 @@ class Fermenter:
         # initialize from config.yaml
         cfg = Config().get_config()
         self.id = id
-        self.sensor_id = cfg['fermenters'][0]['sensor_id']
-        self.name = cfg['fermenters'][0]['name']
-        self.target_temperature = cfg['fermenters'][0]['target_temperature']
-        self.active = cfg['fermenters'][0]['active']   
+        self.sensor_id = cfg['fermenters'][id]['sensor_id']
+        self.name = cfg['fermenters'][id]['name']
+        self.target_temperature = cfg['fermenters'][id]['target_temperature']
+        self.active = cfg['fermenters'][id]['active']   
         # get sensor temperature and time
         sensor = Sensor(self.sensor_id)
         self.temperature = sensor.temperature_formatted()
