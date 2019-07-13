@@ -1,25 +1,18 @@
 brewery:
-  name: Hutsnz Brewery
+  name: Raspbeery Pi
 
-fermenters:
+device:
   - id: 0
-    name: El Frigo
+    name: Kettle
     active: True
     sensor_id: 28-041752558aff
     target_temperature: 21
     gpio_heat: 1
-    gpio_cool: 2
-  - id: 1
-    name: Test Fridge
+    id: 1
+    name: Fridge
     active: True
     sensor_id: 28-041752558aff
     target_temperature: 21
-    gpio_heat: 1
-    gpio_cool: 2
-kettles:
-  - id: 3
-    name: Kettle1
-mashtuns:
-  - id: 4
-    name: Mash Tun 1
+    gpio_heat: 2
+    gpio_cool: 3
     

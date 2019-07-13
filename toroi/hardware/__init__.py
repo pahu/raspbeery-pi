@@ -1,2 +1,2 @@
-import toroi.hardware.fermenter
+import toroi.hardware.device
 import toroi.hardware.sensor

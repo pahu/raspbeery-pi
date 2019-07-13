@@ -3,13 +3,20 @@ $(document).ready(function() {
 });
 
 function poll() {
-    refresh_fermenter(0);
+    device_refresh(0);
     setTimeout(poll,5000);
 }
 
-function refresh_fermenter(id) {
-    $.get('api/fermenter/refresh/' + id, function(data) {
-        $("#fermenter" + id).find(".text-actual-temperature").text(data.temperature);
-        $("#fermenter" + id).find(".text-actual-temperature-time").text(data.temperature_read_time);
+function device_refresh(id) {
+    $.get('api/device/refresh/' + id, function(data) {
+        $("#device" + id).find(".text-actual-temperature").text(data.temperature);
+        $("#device" + id).find(".text-actual-temperature-time").text(data.temperature_read_time);
     });
+}
+
+function device_update(id, data) {
+    $.ajax({
+        url: "api/device/update/" + id,
+        data: data
+    })
 }

@@ -2,25 +2,25 @@
 {% block content %}   
     <div class="row">
         <div class="col-sm">
-            <div id="fermenter0" class="card shadow p-3 mb-5 bg-white rounded">
+            <div id="device0" class="card shadow p-3 mb-5 bg-white rounded">
                 <div class="card-body p-0">
                     <div class="container">    
                     <div class="row">
                         <div class="col-sm h-100 w-50">
-                            <h5 class="text-secondary">{{ fermenter.name }}</h5>
-                            <div class="text-actual-temperature">{{ fermenter.temperature }}</div>    	
-                            <div class="text-actual-temperature-time text-right">{{ fermenter.temperature_read_time }}</div>
+                            <h5 class="text-secondary">{{ device.name }}</h5>
+                            <div class="text-actual-temperature">{{ device.temperature }}</div>    	
+                            <div class="text-actual-temperature-time text-right">{{ device.temperature_read_time }}</div>
                         </div>
                         <div class="col-sm h-100 w-50 text-right">
                             <div class=mb-4>
                                 <input type="text" class="text-target-temperature text-right" 
                                 name="target-temperature" 
-                                value='{{ fermenter.target_temperature }}'>
+                                value='{{ device.target_temperature }}'>
                             </div>
                             <div class="mb-1">
                                 <label class="switch">
                                     <input type="checkbox" 
-                                    {% if fermenter.active %}
+                                    {% if device.active %}
                                         checked
                                     {% endif %} 
                                     >
